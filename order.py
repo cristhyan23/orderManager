@@ -116,19 +116,7 @@ def modifyItens(order_id):
     else:
         print("Please only type Y or N")
             
-
-def main():
-    welcome = "Welcome to the Order Selector"
-    print("*"*len(welcome))
-    print(welcome)
-    print("*"*len(welcome))
-    print("Type 1 to Create an Order ") #done
-    print("Type 2 to Update Status of the Order ") # done
-    print("Type 3 to modify an Item in the the Order ") #done
-    print("Type 4 to Cancel the Order") # done
-    print("Type 5 to Generate your Bill")
-    print("Type 6 to see order Status")
-    print("Type q to end the system!")
+def run():
     while True:
         request = input("What your wish: ")
         if request.isnumeric():
@@ -180,9 +168,23 @@ def main():
             else:
                  print("Request not found")
         elif request.lower() == 'q':
+             print("Thank you, see you soon!")
              break
         else:
             print("Please type a valid number")
 
+def main():
+    welcome = "Welcome to the Order Selector"
+    print("*"*len(welcome))
+    print(welcome)
+    print("*"*len(welcome))
+    print("Type 1 to Create an Order ") #done
+    print("Type 2 to Update Status of the Order ") # done
+    print("Type 3 to modify an Item in the the Order ") #done
+    print("Type 4 to Cancel the Order") # done
+    print("Type 5 to Generate your Bill")
+    print("Type 6 to see order Status")
+    print("Type q to end the system!")
+    run()
 if __name__ == "__main__":
     main()
